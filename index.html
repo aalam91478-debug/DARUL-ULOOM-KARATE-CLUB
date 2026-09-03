@@ -1,350 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Darul Uloom Karate Club</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: #f4f7fb;
-      color: #172033;
-    }
-
-    header {
-      background: #071b35;
-      color: white;
-      padding: 18px 20px;
-      text-align: center;
-      border-bottom: 4px solid #d71920;
-    }
-
-    header h1 {
-      font-size: 28px;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      margin-top: 6px;
-      font-size: 14px;
-      color: #dfe8f5;
-    }
-
-    .hero {
-      max-width: 1000px;
-      margin: 35px auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .logo-circle {
-      width: 150px;
-      height: 150px;
-      margin: auto;
-      border-radius: 50%;
-      background: white;
-      border: 6px solid #071b35;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 70px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    }
-
-    .hero h2 {
-      margin-top: 20px;
-      font-size: 30px;
-      color: #071b35;
-    }
-
-    .hero p {
-      margin-top: 10px;
-      line-height: 1.6;
-    }
-
-    .verify-box {
-      max-width: 650px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.10);
-    }
-
-    .verify-box h3 {
-      font-size: 24px;
-      color: #071b35;
-      margin-bottom: 10px;
-    }
-
-    .verify-box p {
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    input {
-      width: 100%;
-      padding: 14px;
-      border: 2px solid #d7dce5;
-      border-radius: 8px;
-      font-size: 16px;
-      text-align: center;
-      text-transform: uppercase;
-      outline: none;
-    }
-
-    input:focus {
-      border-color: #071b35;
-    }
-
-    button {
-      width: 100%;
-      margin-top: 14px;
-      padding: 14px;
-      border: none;
-      border-radius: 8px;
-      background: #d71920;
-      color: white;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #b9151b;
-    }
-
-    #result {
-      margin-top: 20px;
-    }
-
-    .valid {
-      padding: 20px;
-      border-radius: 10px;
-      background: #e8f8ee;
-      border: 2px solid #22a35a;
-      text-align: left;
-    }
-
-    .valid h4 {
-      color: #168044;
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .valid p {
-      margin: 8px 0;
-      color: #222;
-    }
-
-    .invalid {
-      padding: 20px;
-      border-radius: 10px;
-      background: #fff0f0;
-      border: 2px solid #d71920;
-      color: #b9151b;
-      font-weight: bold;
-    }
-
-    .address {
-      max-width: 850px;
-      margin: 25px auto 40px;
-      padding: 25px;
-      background: white;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    }
-
-    .address h3 {
-      color: #071b35;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      background: #071b35;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #071b35;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 20px;
-      margin-top: 12px;
-      font-size: 13px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darul Uloom Karate Club | Student ID Verification</title>
+<meta name="description" content="Darul Uloom Karate Club official student ID verification portal.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#10233f}
+header{background:#071b35;color:white;text-align:center;padding:28px 16px;border-bottom:5px solid #d71920}
+header h1{margin:8px 0;font-size:30px}
+header p{margin:6px 0;color:#dfe8f5}
+.logo{width:105px;height:105px;border-radius:50%;background:white;border:5px solid #fff;display:flex;align-items:center;justify-content:center;margin:auto;overflow:hidden;box-shadow:0 5px 20px #0003}
+.logo img{width:100%;height:100%;object-fit:contain}
+.container{max-width:950px;margin:28px auto;padding:0 16px}
+.card{background:white;border-radius:16px;padding:24px;margin-bottom:22px;box-shadow:0 7px 25px #10233f18}
+h2{margin-top:0}
+input{width:100%;padding:15px;border:2px solid #d4dbe5;border-radius:10px;font-size:17px;outline:none}
+input:focus{border-color:#071b35}
+button{width:100%;margin-top:12px;padding:15px;border:0;border-radius:10px;background:#d71920;color:white;font-size:17px;font-weight:bold;cursor:pointer}
+button:hover{opacity:.92}
+.example{font-size:13px;color:#667085;margin-top:8px}
+.result{display:none;margin-top:20px;padding:20px;border-radius:12px;border:2px solid #16803c;background:#f0fff5}
+.result.invalid{border-color:#d71920;background:#fff3f3}
+.status{font-weight:bold;font-size:20px}
+.row{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #e7eaf0;padding:10px 0}
+.row:last-child{border-bottom:0}
+.qr{text-align:center;margin-top:18px}
+.qr img{max-width:190px;border:10px solid white;box-shadow:0 2px 12px #0002}
+.address{text-align:center;line-height:1.5}
+footer{background:#071b35;color:white;text-align:center;padding:25px 16px;margin-top:35px;font-size:14px}
+.small{font-size:12px;color:#667085}
+.badge{display:inline-block;background:#071b35;color:white;padding:7px 12px;border-radius:20px;font-size:13px;margin-top:10px}
+</style>
 </head>
-
 <body>
 
 <header>
-  <h1>DARUL ULOOM KARATE CLUB</h1>
-  <p>Discipline • Respect • Excellence</p>
+  <div class="logo">
+    <img src="SAA.png" alt="Darul Uloom Karate Club Logo">
+  </div>
+  <h1>Darul Uloom Karate Club</h1>
+  <p>Official Student ID Verification Portal</p>
+  <span class="badge">Discipline • Respect • Excellence</span>
 </header>
 
-<section class="hero">
+<main class="container">
+  <section class="card">
+    <h2>🔎 Verify Student ID</h2>
+    <p>Enter the official student ID number to check membership details.</p>
+    <input id="idInput" type="text" placeholder="Example: DUKC-0001" autocomplete="off">
+    <div class="example">Valid format: DUKC-0001 to DUKC-0015</div>
+    <button onclick="verifyID()">VERIFY ID</button>
+    <div id="result" class="result"></div>
+  </section>
 
-  <div class="logo-circle">🥋</div>
-
-  <h2>Official Karate Club</h2>
-
-  <p>
-    Welcome to the official website of
-    <strong>Darul Uloom Karate Club</strong>.
-  </p>
-
-  <span class="badge">Student ID Verification System</span>
-
-</section>
-
-
-<section class="verify-box">
-
-  <h3>🔎 Verify Student ID</h3>
-
-  <p>
-    Enter the student's official ID number to verify the membership.
-  </p>
-
-  <input
-    type="text"
-    id="studentId"
-    placeholder="Example: DUKC-0001"
-  >
-
-  <button onclick="verifyStudent()">
-    VERIFY ID
-  </button>
-
-  <div id="result"></div>
-
-</section>
-
-
-<section class="address">
-
-  <h3>📍 Club Address</h3>
-
-  <p>
-    Darul Uloom Karate Club<br>
-    Rajendra Nagar, Mohan Reddy Nagar,<br>
-    Shivarampally Jagir, Telangana – 500052, India
-  </p>
-
-</section>
-
+  <section class="card address">
+    <h2>📍 Club Address</h2>
+    <div>Darul Uloom Karate Club</div>
+    <div>Rajendra Nagar, Mohan Reddy Nagar</div>
+    <div>Shivarampally Jagir, Telangana – 500052, India</div>
+  </section>
+</main>
 
 <footer>
-
-  © 2026 Darul Uloom Karate Club<br>
-  Official Student ID Verification System
-
+  © <span id="year"></span> Darul Uloom Karate Club<br>
+  Student ID verification system
 </footer>
 
-
 <script>
-
 const students = {
-
-  "DUKC-0001": "Mohammad Saadat",
-  "DUKC-0002": "Mohammad Saqib",
-  "DUKC-0003": "Shaik Irfan",
-  "DUKC-0004": "Mohammad Ebadat",
-  "DUKC-0005": "Abu Talha",
-  "DUKC-0006": "Md Sadaqat",
-  "DUKC-0007": "Shaik Omair",
-  "DUKC-0008": "Mohammad Farhan",
-  "DUKC-0009": "Mohammad Adnan",
-  "DUKC-0010": "Abdullah Wali",
-  "DUKC-0011": "Mohammad Ahmad",
-  "DUKC-0012": "Mohammad Chand",
-  "DUKC-0013": "Mohammad Muqtadir",
-  "DUKC-0014": "Shaik Imran",
-  "DUKC-0015": "Abdur Rahman"
-
+"DUKC-0001":"Mohammad Saadat",
+"DUKC-0002":"Mohammad Saqib",
+"DUKC-0003":"Shaik Irfan",
+"DUKC-0004":"Mohammad Ebadat",
+"DUKC-0005":"Abu Talha",
+"DUKC-0006":"Md Sadaqat",
+"DUKC-0007":"Shaik Omair",
+"DUKC-0008":"Mohammad Farhan",
+"DUKC-0009":"Mohammad Adnan",
+"DUKC-0010":"Abdullah Wali",
+"DUKC-0011":"Mohammad Ahmad",
+"DUKC-0012":"Mohammad Chand",
+"DUKC-0013":"Mohammad Muqtadir",
+"DUKC-0014":"Shaik Imran",
+"DUKC-0015":"Abdur Rahman"
 };
 
+const address = "Rajendra Nagar, Mohan Reddy Nagar, Shivarampally Jagir, Telangana 500052, India";
 
-function verifyStudent() {
+function verifyID(){
+  const input=document.getElementById("idInput");
+  const result=document.getElementById("result");
+  const id=input.value.trim().toUpperCase();
+  result.style.display="block";
 
-  const input =
-    document.getElementById("studentId").value
-    .trim()
-    .toUpperCase();
-
-  const result =
-    document.getElementById("result");
-
-  if (students[input]) {
-
-    result.innerHTML = `
-
-      <div class="valid">
-
-        <h4>✓ ID VERIFIED</h4>
-
-        <p>
-          <strong>Club:</strong>
-          Darul Uloom Karate Club
-        </p>
-
-        <p>
-          <strong>Student Name:</strong>
-          ${students[input]}
-        </p>
-
-        <p>
-          <strong>ID Number:</strong>
-          ${input}
-        </p>
-
-        <p>
-          <strong>Status:</strong>
-          ACTIVE
-        </p>
-
-        <p>
-          <strong>Location:</strong>
-          Telangana, India
-        </p>
-
-      </div>
-
-    `;
-
-  } else {
-
-    result.innerHTML = `
-
-      <div class="invalid">
-
-        ✕ ID NOT FOUND<br><br>
-
-        Please check the ID number and try again.
-
-      </div>
-
-    `;
-
+  if(students[id]){
+    const name=students[id];
+    const verificationURL=location.origin+location.pathname+"?id="+encodeURIComponent(id);
+    const qrURL="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data="+encodeURIComponent(verificationURL);
+    result.className="result";
+    result.innerHTML=`
+      <div class="status">✓ ID VERIFIED</div>
+      <div class="row"><strong>Student Name</strong><span>${name}</span></div>
+      <div class="row"><strong>Student ID</strong><span>${id}</span></div>
+      <div class="row"><strong>Club</strong><span>Darul Uloom Karate Club</span></div>
+      <div class="row"><strong>Location</strong><span>Telangana, India</span></div>
+      <div class="qr">
+        <p><strong>Official Verification QR</strong></p>
+        <img src="${qrURL}" alt="Verification QR Code">
+        <p class="small">Scan this QR code to open this student's verification page.</p>
+      </div>`;
+  }else{
+    result.className="result invalid";
+    result.innerHTML=`<div class="status">✕ ID NOT FOUND</div><p>Please check the ID number and try again.</p>`;
   }
-
 }
 
-</script>
+document.getElementById("idInput").addEventListener("keydown",e=>{
+  if(e.key==="Enter") verifyID();
+});
 
+document.getElementById("year").textContent=new Date().getFullYear();
+
+const params=new URLSearchParams(location.search);
+const urlID=params.get("id");
+if(urlID){
+  document.getElementById("idInput").value=urlID;
+  verifyID();
+}
+</script>
 </body>
 </html>
