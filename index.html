@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Darul Uloom Karate Club</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #172033;
+    }
+
+    header {
+      background: #071b35;
+      color: white;
+      padding: 18px 20px;
+      text-align: center;
+      border-bottom: 4px solid #d71920;
+    }
+
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #dfe8f5;
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: 35px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo-circle {
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      border-radius: 50%;
+      background: white;
+      border: 6px solid #071b35;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 70px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .hero h2 {
+      margin-top: 20px;
+      font-size: 30px;
+      color: #071b35;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .verify-box {
+      max-width: 650px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+    }
+
+    .verify-box h3 {
+      font-size: 24px;
+      color: #071b35;
+      margin-bottom: 10px;
+    }
+
+    .verify-box p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 2px solid #d7dce5;
+      border-radius: 8px;
+      font-size: 16px;
+      text-align: center;
+      text-transform: uppercase;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #071b35;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 14px;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #d71920;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #b9151b;
+    }
+
+    #result {
+      margin-top: 20px;
+    }
+
+    .valid {
+      padding: 20px;
+      border-radius: 10px;
+      background: #e8f8ee;
+      border: 2px solid #22a35a;
+      text-align: left;
+    }
+
+    .valid h4 {
+      color: #168044;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .valid p {
+      margin: 8px 0;
+      color: #222;
+    }
+
+    .invalid {
+      padding: 20px;
+      border-radius: 10px;
+      background: #fff0f0;
+      border: 2px solid #d71920;
+      color: #b9151b;
+      font-weight: bold;
+    }
+
+    .address {
+      max-width: 850px;
+      margin: 25px auto 40px;
+      padding: 25px;
+      background: white;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .address h3 {
+      color: #071b35;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #071b35;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #071b35;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>DARUL ULOOM KARATE CLUB</h1>
+  <p>Discipline • Respect • Excellence</p>
+</header>
+
+<section class="hero">
+
+  <div class="logo-circle">🥋</div>
+
+  <h2>Official Karate Club</h2>
+
+  <p>
+    Welcome to the official website of
+    <strong>Darul Uloom Karate Club</strong>.
+  </p>
+
+  <span class="badge">Student ID Verification System</span>
+
+</section>
+
+
+<section class="verify-box">
+
+  <h3>🔎 Verify Student ID</h3>
+
+  <p>
+    Enter the student's official ID number to verify the membership.
+  </p>
+
+  <input
+    type="text"
+    id="studentId"
+    placeholder="Example: DUKC-0001"
+  >
+
+  <button onclick="verifyStudent()">
+    VERIFY ID
+  </button>
+
+  <div id="result"></div>
+
+</section>
+
+
+<section class="address">
+
+  <h3>📍 Club Address</h3>
+
+  <p>
+    Darul Uloom Karate Club<br>
+    Rajendra Nagar, Mohan Reddy Nagar,<br>
+    Shivarampally Jagir, Telangana – 500052, India
+  </p>
+
+</section>
+
+
+<footer>
+
+  © 2026 Darul Uloom Karate Club<br>
+  Official Student ID Verification System
+
+</footer>
+
+
+<script>
+
+const students = {
+
+  "DUKC-0001": "Mohammad Saadat",
+  "DUKC-0002": "Mohammad Saqib",
+  "DUKC-0003": "Shaik Irfan",
+  "DUKC-0004": "Mohammad Ebadat",
+  "DUKC-0005": "Abu Talha",
+  "DUKC-0006": "Md Sadaqat",
+  "DUKC-0007": "Shaik Omair",
+  "DUKC-0008": "Mohammad Farhan",
+  "DUKC-0009": "Mohammad Adnan",
+  "DUKC-0010": "Abdullah Wali",
+  "DUKC-0011": "Mohammad Ahmad",
+  "DUKC-0012": "Mohammad Chand",
+  "DUKC-0013": "Mohammad Muqtadir",
+  "DUKC-0014": "Shaik Imran",
+  "DUKC-0015": "Abdur Rahman"
+
+};
+
+
+function verifyStudent() {
+
+  const input =
+    document.getElementById("studentId").value
+    .trim()
+    .toUpperCase();
+
+  const result =
+    document.getElementById("result");
+
+  if (students[input]) {
+
+    result.innerHTML = `
+
+      <div class="valid">
+
+        <h4>✓ ID VERIFIED</h4>
+
+        <p>
+          <strong>Club:</strong>
+          Darul Uloom Karate Club
+        </p>
+
+        <p>
+          <strong>Student Name:</strong>
+          ${students[input]}
+        </p>
+
+        <p>
+          <strong>ID Number:</strong>
+          ${input}
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          ACTIVE
+        </p>
+
+        <p>
+          <strong>Location:</strong>
+          Telangana, India
+        </p>
+
+      </div>
+
+    `;
+
+  } else {
+
+    result.innerHTML = `
+
+      <div class="invalid">
+
+        ✕ ID NOT FOUND<br><br>
+
+        Please check the ID number and try again.
+
+      </div>
+
+    `;
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
